@@ -150,7 +150,7 @@ def commandResponse(cmdResponse){
 		} else {
 			status = "off"
 		}
-		log.info "${device.name} ${device.label}: Power: ${status}"
+		log.info "REFRSH '${device.label}' '${status}' type:'${device.name}'"
 		sendEvent(name: "switch", value: status)
     } else {
 		refresh()
